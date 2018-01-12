@@ -28,7 +28,7 @@ public class FileNodeViewBinder extends CheckableNodeViewBinder {
 
     @Override
     public void bindView(TreeNode treeNode) {
-        mSpaceView.setWidth(dip2px(itemView.getContext(), 15 * (treeNode.getDepth() - 1)));
+        mSpaceView.setWidth(dip2px(itemView.getContext(), 15 * treeNode.getDepth()));
         textView.setText(treeNode.getValue().toString());
     }
 }

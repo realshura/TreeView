@@ -34,7 +34,7 @@ public class FolderNodeViewBinder extends CheckableNodeViewBinder {
     public void bindView(final TreeNode treeNode) {
         textView.setText(treeNode.getValue().toString());
         imageView.setRotation(treeNode.isExpanded() ? 90 : 0);
-        mSpaceView.setWidth(dip2px(itemView.getContext(), 15 * (treeNode.getDepth() - 1)));
+        mSpaceView.setWidth(dip2px(itemView.getContext(), 15 * treeNode.getDepth()));
     }
 
     @Override
